@@ -3,13 +3,16 @@ Template.messages.messages = function(){
 }
 
 Template.input.events = {
+  
 
+  
+  
 	'keydown input#message': function(event){
 		if (event.which == 13){
 			if (Meteor.user()){
 				var name = Meteor.user().username;
 			}else{
-				var name = 'Anonymous';
+				var name = 'Anonimo';
 			}
 			var message = $('#message');
 			if (message.val() != ''){
@@ -36,6 +39,3 @@ Template.input.events = {
 
 Accounts.ui.config({passwordSignupFields:'USERNAME_AND_OPTIONAL_EMAIL'});
 
-// CLIENTE: Deps.autorun 
-// CLIENTE: Method.call
-// SERVIDOR: Meteor.metheods

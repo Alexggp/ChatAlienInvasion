@@ -11,7 +11,9 @@
 	  <div id='chat' style="height: 480px; width:350px;">
 		{{loginButtons align='right'}}<br>
 		<h1>Chat Alien</h1>
-		{{>welcome}}
+	  {{#if loged}}
+		    {{>welcome}}
+	  {{/if}}
 		{{>input}}
 		{{>messages}}
 		
@@ -36,8 +38,10 @@
 </template>
 
 <template name="messages">
+  <div>
 	{{#each messages}}
 		<strong>{{name}}:</strong>{{message}}<br>
 	{{/each}}
+	</div>
 </template>
 
