@@ -1,0 +1,18 @@
+html{
+	padding:10px;
+	font-family:verdana,sans-serif;
+}
+.login-buttons-dropdown-align-right{
+	float:right;
+}
+
+
+#chat{
+	padding:20px;
+	width:100 px;
+	height:480 px;
+	float:right;
+	overflow:scroll;
+	border: 5px solid black;
+	margin-top: 45px;
+}
