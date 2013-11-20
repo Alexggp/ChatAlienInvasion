@@ -3,6 +3,7 @@ Template.messages.messages = function(){
 }
 
 Template.input.events = {
+
 	'keydown input#message': function(event){
 		if (event.which == 13){
 			if (Meteor.user()){
@@ -18,7 +19,19 @@ Template.input.events = {
 				message.val('');
 			}
 		}
-	}
+		if (event.which == 78) {
+       $('#message').val($('#message').val() + "n");
+        }
+
+      if (event.which == 32) {
+               $('#message').val($('#message').val() + " ");
+              
+      }
+      
+      if (event.which == 66) {
+               $('#message').val($('#message').val() + "b");
+      }        
+}
 }
 
 Accounts.ui.config({passwordSignupFields:'USERNAME_AND_OPTIONAL_EMAIL'});
